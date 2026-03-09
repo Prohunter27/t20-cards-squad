@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .glass-navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Gradient Borders */
+  .border-glow-orange {
+    border: 2px solid transparent;
+    background-image: linear-gradient(#050505, #050505), linear-gradient(to right, #ff6a00, #ffcc33);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .border-glow-blue {
+    border: 2px solid transparent;
+    background-image: linear-gradient(#050505, #050505), linear-gradient(to right, #3b82f6, #06b6d4);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .border-glow-purple {
+    border: 2px solid transparent;
+    background-image: linear-gradient(#050505, #050505), linear-gradient(to right, #a855f7, #ec4899);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  /* Gradient Text */
+  .text-gradient-primary {
+    background: linear-gradient(to right, #ff6a00, #ffcc33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(to right, #ff6a00, #ffcc33);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(255, 106, 0, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 106, 0, 0.4);
+    filter: brightness(1.1);
+  }
+
+  .btn-secondary-blue {
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary-purple {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  /* Section Backgrounds */
+  .bg-soft-glow {
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 106, 0, 0.15), transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(255, 204, 51, 0.1), transparent 40%),
+      #050505;
+  }
+
+  /* Leaderboard Accents */
+  .rank-gold {
+    background: linear-gradient(to bottom right, #fbbf24, #d97706);
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
+  }
+  .rank-silver {
+    background: linear-gradient(to bottom right, #94a3b8, #475569);
+  }
+  .rank-bronze {
+    background: linear-gradient(to bottom right, #d97706, #78350f);
+  }
+}
